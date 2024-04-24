@@ -1,0 +1,14 @@
+.dark {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-primary);
+}
+
+html.dark {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-primary);
+}
+
+.dark .nav-links a {
+    color: #fff;
+}
+

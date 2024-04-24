@@ -1,0 +1,77 @@
+/* Variables ROOT*/
+:root {
+    /* Colors */
+    --color-primary: #007bff;
+    --color-primary-light: #cce5ff;
+    --color-secondary: #6c757d;
+
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+
+    --color-bg: #f1f5f9;
+    --color-text: #333;
+
+
+    /* Colors Dark theme */
+    --color-dark-primary: #343a40;
+    --color-dark-secondary: #6c757d;
+    --color-dark-success: #28a745;
+    --color-dark-danger: #dc3545;
+    --color-dark-warning: #ffc107;
+    --color-dark-bg: #0d0950;
+
+
+    
+
+    /* Fonts */
+    --font-family: 'Roboto', sans-serif;
+
+    /* Font-sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Breakpoints */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    /* Z-index */
+    --z-index-1: 100;
+    --z-index-2: 200;
+    --z-index-3: 300;
+    --z-index-4: 400;
+
+    /* Shadows */
+    --shadow-sm: 0 0 5px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 0 10px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 0 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    /* Border radius */
+    --border-radius: 0.25rem;
+
+
+    /* Transition */
+
+
+    /* Animation */
+
+
+    /* Gradient */
+
+
+    /* Opacity */
+    
+}

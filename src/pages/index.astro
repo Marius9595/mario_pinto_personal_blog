@@ -1,16 +1,59 @@
 ---
-
+import BaseLayout from "../BaseLayout/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<BaseLayout pageTitle="Home">
+  <main class="hero">
+    <section class="hero__content">
+      <h2>Hola, Bienvendid@ a mi web personal!</h2>
+      <p>
+        Me encanta aprender cosas nuevas y compartir lo que sé con los demás.
+        Con este blog espero conseguir ambas cosas.
+      </p>
+      <p>
+        Actualmente, estoy principalmente involucrado en el desarrollo de
+        software, en concreto en soluciones en ingeniería de datos, aunque me
+        gusta el desarrollo Mobile y Web. También me interesan otras áreas como
+        la ciencia, la economía y el deporte.
+      </p>
+    </section>
+
+    <figure class="hero__img_author">
+      <img src="../../public/author.png" />
+    </figure>
+  </main>
+</BaseLayout>
+
+<style>
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    .hero__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    .hero__img_author {
+      flex: 1;
+      border-radius: 2%;
+      border-width: 2px;
+      border-style: solid;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+</style>

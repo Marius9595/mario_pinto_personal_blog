@@ -1,0 +1,18 @@
+---
+const { platform, username } = Astro.props;
+---
+
+<a class="socialIcon" href={`https://www.${platform}.com/${username}`}>
+  <slot />
+</a>
+
+<style>
+  .socialIcon {
+    fill: var(--color-primary);
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+</style>

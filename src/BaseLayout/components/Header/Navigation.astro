@@ -1,0 +1,51 @@
+---
+
+---
+
+<div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/tags/">Tags</a>
+</div>
+
+<style>
+    .nav-links {
+        background-color: var(--color-bg);
+        display: none;
+        a {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: none;
+            font-size: var(--font-size-md);
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--color-text);
+        }
+    }
+
+    .expanded {
+        display: unset;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+        text-decoration: underline var(--color-primary);
+    }
+
+    @media screen and (min-width: 636px) {
+        .nav-links {
+            margin-left: 5em;
+            display: block;
+            position: static;
+            width: auto;
+            background: none;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+    }
+</style>

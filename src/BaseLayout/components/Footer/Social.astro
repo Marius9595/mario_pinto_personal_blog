@@ -8,11 +8,16 @@ const { platform, username } = Astro.props;
 
 <style>
   .socialIcon {
-    fill: var(--color-in-primary);
+      fill: var(--color-in-primary);
 
-    svg {
-      width: 2rem;
-      height: 2rem;
-    }
+      svg {
+          width: 2rem;
+          height: 2rem;
+      }
+
+      &:hover {
+          fill: var(--color-secondary);
+      }
   }
+
 </style>

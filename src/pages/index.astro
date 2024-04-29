@@ -1,21 +1,27 @@
 ---
 import BaseLayout from "../BaseLayout/BaseLayout.astro";
+
+const welcome = 'Hola, Bienvendid@ a mi web personal!'
+
+const proposal = (
+    'Me encanta aprender cosas nuevas y compartir lo que sé con los demás.\n' +
+    'Con este blog espero conseguir ambas cosas.'
+)
+
+const about = (
+    'Actualmente, estoy principalmente involucrado en el desarrollo de\n' +
+    'software, en concreto en soluciones en ingeniería de datos, aunque me\n' +
+    'gusta el desarrollo Mobile y Web. También me interesan otras áreas como\n' +
+    'la ciencia, la economía y el deporte.'
+)
 ---
 
 <BaseLayout pageTitle="Home">
   <main class="hero">
     <section class="hero__content">
-      <h2>Hola, Bienvendid@ a mi web personal!</h2>
-      <p>
-        Me encanta aprender cosas nuevas y compartir lo que sé con los demás.
-        Con este blog espero conseguir ambas cosas.
-      </p>
-      <p>
-        Actualmente, estoy principalmente involucrado en el desarrollo de
-        software, en concreto en soluciones en ingeniería de datos, aunque me
-        gusta el desarrollo Mobile y Web. También me interesan otras áreas como
-        la ciencia, la economía y el deporte.
-      </p>
+      <h2> {welcome} </h2>
+      <p> {proposal} </p>
+      <p> {about} </p>
     </section>
 
     <figure class="hero__img_author">
@@ -55,5 +61,14 @@ import BaseLayout from "../BaseLayout/BaseLayout.astro";
         object-fit: cover;
       }
     }
+  }
+
+  @media screen and (min-width: 636px) {
+      .hero {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+      }
   }
 </style>

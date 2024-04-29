@@ -4,22 +4,20 @@ import Navigation from './Navigation.astro';
 import ThemeIcon from './ThemeIcon.astro';
 ---
 <header>
-  <nav>
-    <div class = "topnav">
-        <Hamburger />
-        <ThemeIcon />
-    </div>
-
-    <Navigation />
-
-  </nav>
+    <nav>
+        <Hamburger/>
+        <Navigation/>
+    </nav>
+    <ThemeIcon/>
 </header>
 
 <style>
 
     header {
-        background-color: var(--color-secondary);
-        position: sticky; 
+        display:flex;
+        justify-content: space-between;
+        background-color: var(--color-primary);
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
@@ -27,14 +25,14 @@ import ThemeIcon from './ThemeIcon.astro';
         padding: 0.5rem 1rem;
     }
 
-    
 
-    .topnav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
+    @media screen and (min-width: 636px) {
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
 

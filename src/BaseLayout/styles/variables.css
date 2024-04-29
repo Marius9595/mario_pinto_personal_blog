@@ -1,29 +1,4 @@
-/* Variables ROOT*/
 :root {
-    /* Colors */
-    --color-primary: #007bff;
-    --color-primary-light: #cce5ff;
-    --color-secondary: #6c757d;
-
-    --color-success: #28a745;
-    --color-danger: #dc3545;
-    --color-warning: #ffc107;
-
-    --color-bg: #f1f5f9;
-    --color-text: #333;
-
-
-    /* Colors Dark theme */
-    --color-dark-primary: #343a40;
-    --color-dark-secondary: #6c757d;
-    --color-dark-success: #28a745;
-    --color-dark-danger: #dc3545;
-    --color-dark-warning: #ffc107;
-    --color-dark-bg: #0d0950;
-
-
-    
-
     /* Fonts */
     --font-family: 'Roboto', sans-serif;
 

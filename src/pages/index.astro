@@ -9,10 +9,10 @@ const proposal = (
 )
 
 const about = (
-    'Actualmente, estoy principalmente involucrado en el desarrollo de\n' +
-    'software, en concreto en soluciones en ingeniería de datos, aunque me\n' +
-    'gusta el desarrollo Mobile y Web. También me interesan otras áreas como\n' +
-    'la ciencia, la economía y el deporte.'
+    'Actualmente, soy desarrollador de software, ' +
+    'he trabajado en varios tipos de proyecto a nivel tecnologico, '  +
+    'como de contexto, y sigo aprendiendo cada día buscando mejorar mis ' +
+    'habilidades con nuevos desafios.'
 )
 ---
 
@@ -22,6 +22,9 @@ const about = (
       <h2> {welcome} </h2>
       <p> {proposal} </p>
       <p> {about} </p>
+       <div class="hero__call_action">
+            <a href="/blog" class="hero_button">Ver Blog</a>
+       </div>
     </section>
 
     <figure class="hero__img_author">
@@ -60,6 +63,28 @@ const about = (
         height: 100%;
         object-fit: cover;
       }
+    }
+
+    .hero__call_action {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .hero_button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: var(--color-primary);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 5px var(--color-secondary);
+        }
+
+        .hero_button:hover {
+            background-color: var(--color-secondary);
+        }
     }
   }
 

@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../BaseLayout/BaseLayout.astro";
 
-const welcome = 'Hola, Bienvendid@ a mi web personal!'
+const welcome = 'Hola, bienvendid@ a mi web personal!'
+
+const author = 'Mario S. Pinto Miranda'
 
 const proposal = (
     'Me encanta aprender cosas nuevas y compartir lo que sé con los demás.\n' +
@@ -19,6 +21,7 @@ const about = (
 <BaseLayout pageTitle="Home">
   <main class="hero">
     <section class="hero__content">
+      <h1> {author} </h1>
       <h2> {welcome} </h2>
       <p> {proposal} </p>
       <p> {about} </p>
@@ -75,7 +78,7 @@ const about = (
             border: none;
             border-radius: 0.5rem;
             background-color: var(--color-primary);
-            color: white;
+            color: var(--color-in-primary);
             font-size: 1rem;
             cursor: pointer;
             text-decoration: none;

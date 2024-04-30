@@ -21,7 +21,7 @@
     --color-secondary-darker:  light-dark(lch(55% 80 var(--secondary-hue)),   lch(20% 20 var(--secondary-hue)));
 
     --color: light-dark(lch(20% 0 var(--hue)), lch(98% 0 var(--hue)));
-    --color-in-primary: light-dark(lch(98% 0 var(--hue)), lch(20% 0 var(--hue)));
+    --color-in-primary: light-dark(lch(98% 0 var(--hue)), lch(98% 0 var(--hue)));
     --color-bg: light-dark(lch(98% 0 var(--hue)), lch(20% 0 var(--hue)));
     --color-code: light-dark(lch(50% 0 var(--hue)), lch(70% 0 var(--hue)));
 }

@@ -1,24 +1,35 @@
 import s from './Posts.module.css';
 import {Post} from "./Post.tsx";
 
-export function Posts  ({ filteredPosts}:any) {
+export type Post = {
+  title: string;
+  tags: string[];
+  image: {
+    url: string;
+    alt: string;
+  }
+  publicationDate: string;
+  url: string;
+}
+
+export function Posts({posts}: {posts: Post[]}) {
   return (
       <section className={s.posts}>
 
         <section className={
-          filteredPosts?s.posts__posts:s.posts__no_matches
+          posts ? s.posts__posts : s.posts__no_matches
         }
         >
-          {filteredPosts?filteredPosts.map((post: any, index: number) => (
+          {posts ? posts.map((post: Post, index: number) => (
               <Post
-                  title={post.frontmatter.title}
-                  tags={post.frontmatter.tags}
-                  image={post.frontmatter.image}
-                  publicationDate={post.frontmatter.publicationDate}
-                  url={post.frontmatter.url?post.frontmatter.url:post.url}
+                  title={post.title}
+                  tags={post.tags}
+                  image={post.image}
+                  publicationDate={post.publicationDate}
+                  url={post.url ? post.url : post.url}
                   key={index}
               />
-          )): <p className={s.posts__no_matches_text} >
+          )) : <p className={s.posts__no_matches_text}>
             No se encontraron coincidencias para la búsqueda
           </p>
 

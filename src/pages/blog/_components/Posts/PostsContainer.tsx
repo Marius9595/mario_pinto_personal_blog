@@ -1,10 +1,9 @@
-import {Posts} from "./Posts.tsx";
+import {type Post, Posts} from "./Posts.tsx";
 import {useState} from "react";
 import {SearchBar} from "./SearchBar.tsx";
 
-export function PostsContainer({posts}: { posts: any[] }) {
 
-
+export function PostsContainer({posts}: { posts: Post[] }) {
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
   const handleSearch = (searchTerm: string) => {
@@ -12,9 +11,10 @@ export function PostsContainer({posts}: { posts: any[] }) {
       return;
     }
 
-    const filtered = posts.filter((post: any) =>
-        post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase())
-        || post.frontmatter.tags.join(' ').toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = posts.filter((post: Post) => {
+          return post.title.toLowerCase().includes(searchTerm.toLowerCase())
+              || post.tags.join(' ').toLowerCase().includes(searchTerm.toLowerCase())
+        }
     );
 
     setFilteredPosts(filtered);
@@ -27,6 +27,6 @@ export function PostsContainer({posts}: { posts: any[] }) {
   return (
       <>
         <SearchBar onSearch={handleSearch} onReset={handleReset}/>
-        <Posts filteredPosts={filteredPosts}/>
+        <Posts posts={filteredPosts}/>
       </>)
 }

@@ -1,15 +1,27 @@
+
 ---
 import BaseLayout from '../../BaseLayout/BaseLayout.astro';
 import {PostsContainer} from './_components/Posts/PostsContainer';
+import {Post} from "./types/Post";
+import type {Image} from "./types/Image";
 
-const allPosts = await Astro.glob('../../pages/posts/*.md');
+const markdownPosts = await Astro.glob('../../pages/posts/*.md');
+
+const posts = markdownPosts.map((post): Post => {
+  return {
+    title: post.frontmatter.title as string,
+    tags: post.frontmatter.tags as string[],
+    image: post.frontmatter.image as Image,
+    publicationDate: post.frontmatter.publicationDate as string,
+    url: post.frontmatter.url ? post.frontmatter.url : post.url as string
+  }
+})
 ---
 
 <BaseLayout pageTitle="blog">
-
     <main class="posts">
         <h1>Blog</h1>
-        <PostsContainer posts={allPosts} client:load/>
+        <PostsContainer posts={posts} client:load/>
     </main>
 </BaseLayout>
 
@@ -28,7 +40,7 @@ const allPosts = await Astro.glob('../../pages/posts/*.md');
         align-items: center;
     }
 
-    @media(min-width: 768px){
+    @media (min-width: 768px) {
         .posts {
             display: flex;
             flex-direction: column;

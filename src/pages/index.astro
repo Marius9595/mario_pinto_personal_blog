@@ -57,15 +57,14 @@ const about = (
 
         .hero__img_author {
             flex: 1;
-            border-radius: 2%;
-            border-width: 2px;
-            border-style: solid;
             overflow: hidden;
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                border-radius: 2%;
+                border: 2px solid var(--color-primary);
             }
         }
 
@@ -94,13 +93,13 @@ const about = (
         }
     }
 
-    @media screen and (min-width: 636px) {
+    @media screen and (min-width: 800px) {
         .hero {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 4.5rem 3rem;
+            padding:  6rem;
         }
     }
 </style>

@@ -1,18 +1,41 @@
 ---
+//TODO (NO-URGENTE): Debe ser un React Component para testear el estado de la navegación
 
+let currentPath = Astro.request.url;
+
+const paths = [
+  {path: '/about/', name: 'About'},
+  {path: '/blog/', name: 'Blog'},
+  {path: '/tags/', name: 'Tags'},
+];
 ---
 
 <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/tags/">Tags</a>
+
+    <a href={"/"}
+       class={
+           paths.find(
+               (path) => currentPath.includes(path.path))
+               ? '' : 'isInPage'}
+    >
+        Home
+    </a>
+
+  {
+    paths.map((path) => {
+      const isInPage = (
+          currentPath.includes(path.path)
+      );
+      return <a href={path.path}  class={isInPage ? 'isInPage' : ''}>{path.name}</a>
+    })
+  }
 </div>
 
 <style>
     .nav-links {
         display: none;
         background-color: var(--color-bg);
+
         a {
             display: block;
             text-align: center;
@@ -27,6 +50,14 @@
 
     .expanded {
         display: unset;
+    }
+
+    .isInPage {
+        font-weight: bold;
+        text-decoration: underline var(--color-secondary)!important;
+        text-decoration-thickness: 5px !important;
+        cursor: not-allowed;
+        pointer-events: none;
     }
 
     .nav-links a:hover,

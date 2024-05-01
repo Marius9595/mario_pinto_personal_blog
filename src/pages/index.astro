@@ -12,92 +12,94 @@ const proposal = (
 
 const about = (
     'Actualmente, soy desarrollador de software, ' +
-    'he trabajado en varios tipos de proyecto a nivel tecnologico, '  +
+    'he trabajado en varios tipos de proyecto a nivel tecnologico, ' +
     'como de contexto, y sigo aprendiendo cada día buscando mejorar mis ' +
     'habilidades con nuevos desafios.'
 )
 ---
 
 <BaseLayout pageTitle="Home">
-  <main class="hero">
-    <section class="hero__content">
-      <h1> {author} </h1>
-      <h2> {welcome} </h2>
-      <p> {proposal} </p>
-      <p> {about} </p>
-       <div class="hero__call_action">
-            <a href="/blog" class="hero_button">Ver Blog</a>
-       </div>
-    </section>
+    <main class="hero">
+        <section class="hero__content">
+            <h1> {author} </h1>
+            <h2> {welcome} </h2>
+            <p> {proposal} </p>
+            <p> {about} </p>
+            <div class="hero__call_action">
+                <a href="/blog" class="hero_button">Ver Blog</a>
+                <a href="/about" class="hero_button">Más sobre mi</a>
+            </div>
+        </section>
 
-    <figure class="hero__img_author">
-      <img src="../../public/author.png" alt={author}/>
-    </figure>
-  </main>
+        <figure class="hero__img_author">
+            <img src="../../public/author.png" alt={author}/>
+        </figure>
+    </main>
 </BaseLayout>
 
 <style>
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-
-    .hero__content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      p {
-        text-align: justify;
-      }
-    }
-
-    .hero__img_author {
-      flex: 1;
-      border-radius: 2%;
-      border-width: 2px;
-      border-style: solid;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .hero__call_action {
+    .hero {
         display: flex;
-        justify-content: center;
-        margin-top: 1rem;
+        flex-direction: column;
+        padding: 4.5rem 3rem;
 
-        .hero_button {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 0.5rem;
-            color: var(--color-in-primary);
-            font-size: 1rem;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 0 5px var(--color-secondary);
-            background-color: var(--color-secondary);
+        .hero__content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                text-align: justify;
+            }
         }
 
-        .hero_button:hover {
-            box-shadow: 0 0 15px var(--color-primary);
-            transition: box-shadow 0.5s;
+        .hero__img_author {
+            flex: 1;
+            border-radius: 2%;
+            border-width: 2px;
+            border-style: solid;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .hero__call_action {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            gap: 2rem;
+
+            .hero_button {
+                padding: 0.5rem 1rem;
+                border: none;
+                border-radius: 0.5rem;
+                color: var(--color-in-primary);
+                font-size: 1rem;
+                cursor: pointer;
+                text-decoration: none;
+                box-shadow: 0 0 5px var(--color-secondary);
+                background-color: var(--color-secondary);
+            }
+
+            .hero_button:hover {
+                box-shadow: 0 0 20px var(--color-secondary);
+                transition: box-shadow 0.5s;
+            }
         }
     }
-  }
 
-  @media screen and (min-width: 636px) {
-      .hero {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-      }
-  }
+    @media screen and (min-width: 636px) {
+        .hero {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 </style>

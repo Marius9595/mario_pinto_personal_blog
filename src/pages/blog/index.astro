@@ -1,11 +1,40 @@
 ---
 import BaseLayout from '../../BaseLayout/BaseLayout.astro';
-import BlogPost from './_components/BlogPost.astro';
+import {PostsContainer} from './_components/Posts/PostsContainer';
 
 const allPosts = await Astro.glob('../../pages/posts/*.md');
 ---
 
 <BaseLayout pageTitle="blog">
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+
+    <main class="posts">
+        <h1>Blog</h1>
+        <PostsContainer posts={allPosts} client:load/>
+    </main>
 </BaseLayout>
+
+<style>
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media(min-width: 768px){
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+</style>
 

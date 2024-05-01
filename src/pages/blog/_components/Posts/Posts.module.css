@@ -1,0 +1,21 @@
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .posts__posts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .posts__no_matches_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

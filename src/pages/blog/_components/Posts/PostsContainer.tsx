@@ -1,14 +1,15 @@
 import {Posts} from "./Posts.tsx";
 import {useState} from "react";
+import {SearchBar} from "./SearchBar.tsx";
 
-export function PostsContainer({posts}: {posts: any[]}) {
+export function PostsContainer({posts}: { posts: any[] }) {
 
 
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
   const handleSearch = (searchTerm: string) => {
-    if(searchTerm === "") {
-        return;
+    if (searchTerm === "") {
+      return;
     }
 
     const filtered = posts.filter((post: any) =>
@@ -24,10 +25,8 @@ export function PostsContainer({posts}: {posts: any[]}) {
   };
 
   return (
-      <Posts
-          onSearchPost={handleSearch}
-          onReset={handleReset}
-          filteredPosts={filteredPosts}
-      />
-  )
+      <>
+        <SearchBar onSearch={handleSearch} onReset={handleReset}/>
+        <Posts filteredPosts={filteredPosts}/>
+      </>)
 }

@@ -1,11 +1,10 @@
 import s from './Posts.module.css';
-import {SearchBar} from "./SearchBar.tsx";
 import {Post} from "./Post.tsx";
 
-export function Posts  ({onSearchPost, onReset, filteredPosts}:any) {
+export function Posts  ({ filteredPosts}:any) {
   return (
       <section className={s.posts}>
-        <SearchBar onSearch={onSearchPost} onReset={onReset}/>
+
         <section className={
           filteredPosts?s.posts__posts:s.posts__no_matches
         }

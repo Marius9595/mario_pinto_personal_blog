@@ -4,7 +4,7 @@ layout: './_layout/MarkdownPostLayout.astro'
 title: Memoización para optimizar procesos en ingeniería de datos
 publicationDate: "2023-04-18"
 image: 
-  url: /blog/memoizacion.jpeg
+  url: /public/posts-covers/memoizacion.jpeg
   alt: "Memoización para optimizar procesos en ingeniería de datos"
 author: "Mario S. Pinto Miranda"
 tags: ["Data", "Optimización", "Memoización"]

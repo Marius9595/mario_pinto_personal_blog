@@ -5,7 +5,7 @@ title: Maintainable Failed Rows SQL Queries for soda.io
 publicationDate: "2023-10-12"
 author: "Mario S. Pinto Miranda"
 image: 
-  url: /blog/failed-rows.png
+  url: /public/posts-covers/failed-rows.png
   alt: "Maintainable Failed Rows SQL Queries for soda.io"
 tags: ["Data-Quality", "SQL", "Maintainability"]
 description: "How to write maintainable SQL queries for failed rows in soda.io following a structured pattern."

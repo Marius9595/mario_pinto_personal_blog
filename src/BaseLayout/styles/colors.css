@@ -1,9 +1,7 @@
-
-
-
 :root {
-
+    --hue: 230;
     color-scheme: light dark;
+
 
     --complimentary: 180;
     --split-complimentary: 150;
@@ -11,14 +9,13 @@
     --analogous: 30;
 
 
-    --hue: 220;
     --tetradic: calc(var(--analogous) + var(--complimentary));
     --secondary-hue: calc(var(--hue) + var(--complimentary));
 
-    --color-primary: light-dark(lch(55% 80 var(--hue)),   lch(20% 20 var(--hue)));
+    --color-primary: light-dark(lch(55% 80 var(--hue)), lch(20% 20 var(--hue)));
     --color-primary-lighter: light-dark(lch(65% 80 var(--hue), lch(25% 20 var(--hue))));
-    --color-secondary:  light-dark(lch(55% 80 var(--secondary-hue)),   lch(20% 20 var(--secondary-hue)));
-    --color-secondary-darker:  light-dark(lch(55% 80 var(--secondary-hue)),   lch(20% 20 var(--secondary-hue)));
+    --color-secondary: light-dark(lch(55% 80 var(--secondary-hue)), lch(20% 20 var(--secondary-hue)));
+    --color-secondary-darker: light-dark(lch(55% 80 var(--secondary-hue)), lch(20% 20 var(--secondary-hue)));
 
     --color: light-dark(lch(20% 0 var(--hue)), lch(98% 0 var(--hue)));
     --color-in-primary: light-dark(lch(98% 0 var(--hue)), lch(98% 0 var(--hue)));
@@ -29,6 +26,7 @@
 .light {
     color-scheme: light;
 }
+
 .dark {
     color-scheme: dark;
 }

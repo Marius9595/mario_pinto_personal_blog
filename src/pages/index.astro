@@ -77,16 +77,17 @@ const about = (
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 0.5rem;
-            background-color: var(--color-primary);
             color: var(--color-in-primary);
             font-size: 1rem;
             cursor: pointer;
             text-decoration: none;
             box-shadow: 0 0 5px var(--color-secondary);
+            background-color: var(--color-secondary);
         }
 
         .hero_button:hover {
-            background-color: var(--color-secondary);
+            box-shadow: 0 0 15px var(--color-primary);
+            transition: box-shadow 0.5s;
         }
     }
   }

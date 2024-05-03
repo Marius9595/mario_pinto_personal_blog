@@ -1,9 +1,10 @@
-
 ---
 import BaseLayout from '../../BaseLayout/BaseLayout.astro';
 import {PostsContainer} from './_components/Posts/PostsContainer';
 import {Post} from "./types/Post";
 import type {Image} from "./types/Image";
+import SEO from "../_shared/SEO.astro";
+import {MetaSEO} from "../_shared/types/MetaSEO";
 
 const markdownPosts = await Astro.glob('../../pages/blog/posts/*.md');
 
@@ -16,9 +17,21 @@ const posts = markdownPosts.map((post): Post => {
     url: post.frontmatter.url ? post.frontmatter.url : post.url as string
   }
 })
+
+const meta:MetaSEO = {
+  title: 'Blog',
+  description: 'Contenido sobre desarrollo de software, tecnología y otros temas de interés personal',
+  image: {
+    url: 'author.png',
+    alt: 'Mario S. Pinto Miranda'
+  },
+  keywords: ['blog', 'desarrollo de software', 'tecnología', 'programación'],
+  url: '/blog',
+}
 ---
 
 <BaseLayout pageTitle="blog">
+    <SEO slot="head" meta={meta} />
     <main class="posts">
         <h1>Blog</h1>
         <PostsContainer posts={posts} client:load/>
@@ -26,18 +39,16 @@ const posts = markdownPosts.map((post): Post => {
 </BaseLayout>
 
 <style>
-
-    h1 {
-        text-align: center;
-        margin: 0;
-    }
-
     .posts {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         justify-content: center;
         align-items: center;
+
+        h1 {
+            display: none;
+        }
     }
 
     @media (min-width: 768px) {
@@ -45,8 +56,13 @@ const posts = markdownPosts.map((post): Post => {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            h1 {
+                display: block;
+                text-align: center;
+                margin: 0;
+            }
         }
     }
-
 </style>
 

@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../../../../BaseLayout/BaseLayout.astro";
+import SEO from "../../../_shared/SEO.astro";
+import {MetaSEO} from "../../../_shared/types/MetaSEO";
 
-type postFrontmatter = {
+type postFrontMatter = {
   title: string
   publicationDate: string
   tags: Array<string>
@@ -14,20 +16,29 @@ type postFrontmatter = {
 
   url?: string
 }
-const { frontmatter } = Astro.props;
+const {frontmatter} = Astro.props;
 
-const data: postFrontmatter = frontmatter;
+const data: postFrontMatter = frontmatter;
+
+const meta: MetaSEO = {
+  title: data.title,
+  description: data.description,
+  image: {
+    url: data.image.url,
+    alt: data.image.alt
+  },
+  url: data.url,
+  keywords: data.tags
+}
 ---
 
-<BaseLayout pageTitle={data.title}>
+<BaseLayout>
+    <SEO slot="head" meta={meta}/>
     <main class="content_post">
         <h1>{data.title}</h1>
         <h3>{data.publicationDate}</h3>
-
-
-        <hr />
-
-        <slot />
+        <hr/>
+        <slot/>
     </main>
 
     <script is:inline>
@@ -77,7 +88,6 @@ const data: postFrontmatter = frontmatter;
         h1 {
             text-align: center;
         }
-
 
 
         p, li {

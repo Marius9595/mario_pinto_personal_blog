@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../BaseLayout/BaseLayout.astro";
+import SEO from "./_shared/SEO.astro";
+import {MetaSEO} from "./_shared/types/MetaSEO";
 
 const welcome = 'Hola, bienvendid@ a mi web personal!'
 
@@ -16,9 +18,20 @@ const about = (
     'como de contexto, y sigo aprendiendo cada día buscando mejorar mis ' +
     'habilidades con nuevos desafios.'
 )
+const meta: MetaSEO = {
+  title: 'Mario S. Pinto Miranda',
+  description: 'Blog personal de Mario S. Pinto Miranda',
+  image: {
+      url:'author.png',
+      alt: 'Mario S. Pinto Miranda'
+  },
+  keywords: ['blog', 'personal', 'desarrollo', 'software', 'tecnologia'],
+  url: '',
+}
 ---
 
-<BaseLayout pageTitle="Home">
+<BaseLayout>
+    <SEO slot="head" meta={meta}/>
     <main class="hero">
         <section class="hero__content">
             <h1> {author} </h1>
@@ -98,7 +111,7 @@ const about = (
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding:  6rem;
+            padding: 6rem;
         }
     }
 </style>

@@ -5,7 +5,7 @@ import {PostsContainer} from './_components/Posts/PostsContainer';
 import {Post} from "./types/Post";
 import type {Image} from "./types/Image";
 
-const markdownPosts = await Astro.glob('../../pages/posts/*.md');
+const markdownPosts = await Astro.glob('../../pages/blog/posts/*.md');
 
 const posts = markdownPosts.map((post): Post => {
   return {

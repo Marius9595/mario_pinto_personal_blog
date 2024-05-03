@@ -5,33 +5,52 @@ import Social from '../Footer/Social.astro';
 import InstragramIcon from './InstragramIcon.astro';
 import MailIcon from './MailIcon.astro';
 import YoutubeIcon from './tube.astro';
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <Social platform="twitter" username="astrodotbuild">
-    <LinkedinIcon/>
-  </Social>
-  <Social platform="github" username="withastro">
-    <GithubIcon/>
-  </Social>
-  <Social platform="youtube" username="astrodotbuild">
-    <MailIcon/>
-  </Social>
-  <Social platform="youtube" username="astrodotbuild">
-    <YoutubeIcon/>
-  </Social>
-  <Social platform="youtube" username="astrodotbuild">
-    <InstragramIcon/>
-  </Social>
-
+    <div class="footer_text">
+        <p>© {currentYear} Mario S. Pinto Miranda. Todos los derechos reservados.</p>
+    </div>
+    <div class="social_buttons">
+        <Social platform="twitter" username="astrodotbuild">
+            <LinkedinIcon/>
+        </Social>
+        <Social platform="github" username="withastro">
+            <GithubIcon/>
+        </Social>
+        <Social platform="youtube" username="astrodotbuild">
+            <MailIcon/>
+        </Social>
+        <Social platform="youtube" username="astrodotbuild">
+            <YoutubeIcon/>
+        </Social>
+        <Social platform="youtube" username="astrodotbuild">
+            <InstragramIcon/>
+        </Social>
+    </div>
 </footer>
 
-<style> 
-  footer {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 0.5rem;
-    background-color: var(--color-primary);
-  }
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5rem;
+        background-color: var(--color-primary);
+    }
+
+    .social_buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        footer {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 </style>

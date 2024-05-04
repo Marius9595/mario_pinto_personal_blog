@@ -1,8 +1,19 @@
 ---
 ---
 <button id="themeToggle">
-    <p>🌞</p>
 </button>
+
+<script is:inline>
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    theme = localStorage.getItem('theme') ?? "light";
+    isDark = theme === "dark";
+
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(isDark ? "light" : "dark");
+    document.getElementById("themeToggle").textContent = isDark ? "🌞" : "🌜";
+    localStorage.setItem('theme', isDark ? "light" : "dark");
+  });
+</script>
 
 <style>
 
@@ -25,18 +36,3 @@
         }
     }
 </style>
-
-<script is:inline>
-  function initializeTheme() {
-    document.getElementById("themeToggle").addEventListener("click", () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      document.getElementById("themeToggle").textContent = isDark ? "🌜" : "🌞";
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-
-    const currentTheme = () => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.classList.add(currentTheme());
-  }
-
-  initializeTheme();
-</script>

@@ -8,7 +8,7 @@ import type {MetaSEO} from "../_shared/types/MetaSEO";
 
 const markdownPosts = await Astro.glob('../../pages/blog/posts/*.md');
 
-const posts = markdownPosts.map((post): Post => {
+const posts: Post[] = markdownPosts.map((post): Post => {
   return {
     title: post.frontmatter.title as string,
     tags: post.frontmatter.tags as string[],

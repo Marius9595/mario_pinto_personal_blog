@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Maintainable Failed Rows SQL Queries for soda.io"
-pubDate: "2023-10-12"
+pubDate: "12/10/2023"
 author: "Mario S. Pinto Miranda"
 image: 
   url: "/posts-covers/failed-rows.png"

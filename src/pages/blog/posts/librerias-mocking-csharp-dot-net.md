@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Librerías de mocking para C# .NET"
-pubDate: "2023-11-16"
+pubDate: "16/11/2023"
 author: "Mario S. Pinto Miranda"
 image: 
   url: "/posts-covers/librerias-mocks-csharp.webp"

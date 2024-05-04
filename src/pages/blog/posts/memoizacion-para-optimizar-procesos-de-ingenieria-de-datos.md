@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Memoización para optimizar procesos en ingeniería de datos"
-pubDate: "2023-04-18"
+pubDate: "18/04/2023"
 image: 
   url: "/posts-covers/memoizacion.jpeg"
   alt: "Memoización para optimizar procesos en ingeniería de datos"

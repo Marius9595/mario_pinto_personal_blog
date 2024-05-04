@@ -1,26 +1,15 @@
 import s from './Posts.module.css';
 import {Post} from "./Post.tsx";
+import type {PostMeta} from "../../_types/PostMeta.ts";
 
-export type Post = {
-  title: string;
-  tags: string[];
-  image: {
-    url: string;
-    alt: string;
-  }
-  publicationDate: string;
-  url: string;
-}
-
-export function Posts({posts}: {posts: Post[]}) {
+export default function Posts({posts}: { posts: PostMeta[] }) {
   return (
       <section className={s.posts}>
-
         <section className={
           posts ? s.posts__posts : s.posts__no_posts_text
         }
         >
-          {posts ? posts.map((post: Post, index: number) => (
+          {posts.length > 0 ? posts.map((post: PostMeta, index: number) => (
               <Post
                   title={post.title}
                   tags={post.tags}

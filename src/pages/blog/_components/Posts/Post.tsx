@@ -1,8 +1,9 @@
 import s from "./Post.module.css"
-import type {Post} from "./Posts.tsx";
+
+import type {PostMeta} from "../../_types/PostMeta.ts";
 
 
-export function Post(post: Post) {
+export function Post(post: PostMeta) {
   return (
       <a
           className={s.post}

@@ -1,9 +1,10 @@
-import {type Post, Posts} from "./Posts.tsx";
 import {useState} from "react";
 import {SearchBar} from "./SearchBar.tsx";
+import type {PostMeta} from "../../_types/PostMeta.ts";
+import Posts from "./Posts.tsx";
 
 
-export function PostsContainer({posts}: { posts: Post[] }) {
+export function PostsContainer({posts}: { posts: PostMeta[] }) {
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
   const handleSearch = (searchTerm: string) => {
@@ -11,7 +12,7 @@ export function PostsContainer({posts}: { posts: Post[] }) {
       return;
     }
 
-    const filtered = posts.filter((post: Post) => {
+    const filtered = posts.filter((post: PostMeta) => {
           return post.title.toLowerCase().includes(searchTerm.toLowerCase())
               || post.tags.join(' ').toLowerCase().includes(searchTerm.toLowerCase())
         }

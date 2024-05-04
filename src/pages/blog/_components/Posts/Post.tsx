@@ -1,17 +1,8 @@
 import s from "./Post.module.css"
+import type {Post} from "./Posts.tsx";
 
-export interface Props {
-  title: string;
-  tags: string[];
-  image: {
-    url: string;
-    alt: string;
-  }
-  publicationDate: string;
-  url: string;
-}
 
-export function Post(post: Props) {
+export function Post(post: Post) {
   return (
       <a
           className={s.post}

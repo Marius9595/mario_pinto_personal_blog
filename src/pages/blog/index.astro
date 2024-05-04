@@ -13,7 +13,7 @@ const posts = markdownPosts.map((post): Post => {
     title: post.frontmatter.title as string,
     tags: post.frontmatter.tags as string[],
     image: post.frontmatter.image as Image,
-    publicationDate: post.frontmatter.publicationDate as string,
+    publicationDate: post.frontmatter.pubDate as string,
     url: post.frontmatter.url ? post.frontmatter.url : post.url as string
   }
 })

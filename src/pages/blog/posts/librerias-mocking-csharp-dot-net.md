@@ -1,11 +1,10 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
-
-title: Librerías de mocking para C# .NET
-publicationDate: "2023-11-16"
+title: "Librerías de mocking para C# .NET"
+pubDate: "2023-11-16"
 author: "Mario S. Pinto Miranda"
 image: 
-  url: /posts-covers/librerias-mocks-csharp.webp
+  url: "/posts-covers/librerias-mocks-csharp.webp"
   alt: "Librerías de mocking para C# .NET"
 tags: ["Mocking", "Csharp", "Testing"]
 description: "Una guía rápida sobre las librerías para mocking más populares para C# .NET. para que puedas elegir la que mejor se adapte a tus necesidades."

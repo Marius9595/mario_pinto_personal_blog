@@ -1,15 +1,15 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
-
-title: Maintainable Failed Rows SQL Queries for soda.io
-publicationDate: "2023-10-12"
+title: "Maintainable Failed Rows SQL Queries for soda.io"
+pubDate: "2023-10-12"
 author: "Mario S. Pinto Miranda"
 image: 
-  url: /posts-covers/failed-rows.png
+  url: "/posts-covers/failed-rows.png"
   alt: "Maintainable Failed Rows SQL Queries for soda.io"
 tags: ["Data-Quality", "SQL", "Maintainability"]
 description: "How to write maintainable SQL queries for failed rows in soda.io following a structured pattern."
 ---
+
 
 In this [article](https://leanmind.es/en/blog/soda-checks-development-with-test-driven-development/),
 we saw the importance of having good data quality,

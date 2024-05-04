@@ -1,15 +1,15 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
-
-title: Parametrización de tests con xUnit (C#)
-publicationDate: "2023-11-19"
+title: "Parametrización de tests con xUnit (C#)"
+pubDate: "2023-11-19"
 image: 
-  url: /posts-covers/parametrizacion-xunit-csharp.webp
+  url: "/posts-covers/parametrizacion-xunit-csharp.webp"
   alt: "Parametrización de tests con xUnit (C#)"
 author: "Mario S. Pinto Miranda"
 tags: ["xUnit", "Csharp", "Testing"]
 description: "En este artículo se introduce a la parametrización de tests y cómo realizarlo con xUnit en C#."
 ---
+
 Recuerdo las primeras veces escribiendo tests, cuando aprendía a aplicar
 Test-Driven-Development. Hubo un momento que, con algunas katas, hacer tests
 era un dolor porque se volvían difíciles de mantener. Entre esos tests estaban

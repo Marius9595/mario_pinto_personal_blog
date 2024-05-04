@@ -29,14 +29,13 @@
         z-index: 2;
         bottom: 0;
         width: 100%;
-        max-height: 10rem;
-        min-height: 10rem;
         background-color: var(--color-primary);
         color: var(--color-in-primary);
         opacity: 0.8;
         padding: 5%;
         margin: 1% 0 0 0;
         border-radius: 0 0 10px 10px;
+        height: 50%;
     }
 
     .post__title {
@@ -79,4 +78,5 @@
     box-shadow: 0 0 15px 0 var(--color-secondary);
     transition: box-shadow var(--transition-time);
 }
+
 

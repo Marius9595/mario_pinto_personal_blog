@@ -12,7 +12,7 @@
         gap: 3rem;
     }
 
-    .posts__no_matches_text{
+    .posts__no_posts_text{
         display: flex;
         justify-content: center;
         align-items: center;

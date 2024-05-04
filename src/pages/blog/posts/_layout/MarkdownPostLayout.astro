@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../../BaseLayout/BaseLayout.astro";
 import SEO from "../../../_shared/SEO.astro";
-import {MetaSEO} from "../../../_shared/types/MetaSEO";
+import type {MetaSEO} from "../../../_shared/types/MetaSEO";
 
 type postFrontMatter = {
   title: string
@@ -20,14 +20,14 @@ const {frontmatter} = Astro.props;
 
 const data: postFrontMatter = frontmatter;
 
-const meta: MetaSEO = {
+const meta:MetaSEO = {
   title: data.title,
   description: data.description,
   image: {
     url: data.image.url,
     alt: data.image.alt
   },
-  url: data.url,
+  url: data.url? data.url: Astro.url.pathname,
   keywords: data.tags
 }
 ---

@@ -1,17 +1,19 @@
 ---
-import {MetaSEO} from "./types/MetaSEO";
-const {meta}:{meta:MetaSEO}  = Astro.props
+import type {MetaSEO} from "./types/MetaSEO";
+const {meta}  = Astro.props
+
+const metas: MetaSEO = meta
 ---
-<title>{meta.title}</title>
-<meta name="description" content={meta.description}/>
-<meta name="keywords" content={meta.keywords}/>
+<title>{metas.title}</title>
+<meta name="description" content={metas.description}/>
+<meta name="keywords" content={metas.keywords.toString()}/>
 <meta name="author" content="Mario Sebastián Pinto Miranda"/>
-<meta name="robots" content={meta.robots?meta.robots:'index, follow'}/>
+<meta name="robots" content={metas.robots?metas.robots:'index, follow'}/>
 <meta property=”og:type” content="website"/>
-<meta property=”og:title” content={meta.title}/>
-<meta property=”og:description” content={meta.description}/>
-<meta property=”og:image” content={meta.image.url}/>
-<meta property=”og:url” content={'https://mario.pinto.dev'+meta.url}/>
+<meta property=”og:title” content={metas.title}/>
+<meta property=”og:description” content={metas.description}/>
+<meta property=”og:image” content={metas.image.url}/>
+<meta property=”og:url” content={'https://mario.pinto.dev'+metas.url}/>
 
 
 

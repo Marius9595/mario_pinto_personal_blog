@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../BaseLayout/BaseLayout.astro';
 import {PostsContainer} from './_components/Posts/PostsContainer';
-import {Post} from "./types/Post";
+import type {Post} from "./types/Post";
 import type {Image} from "./types/Image";
 import SEO from "../_shared/SEO.astro";
-import {MetaSEO} from "../_shared/types/MetaSEO";
+import type {MetaSEO} from "../_shared/types/MetaSEO";
 
 const markdownPosts = await Astro.glob('../../pages/blog/posts/*.md');
 

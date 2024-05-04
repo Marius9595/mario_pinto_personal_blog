@@ -1,7 +1,7 @@
 import s from "./SearchBar.module.css"
 import React, {type ChangeEvent, useState} from "react";
 
-interface SearchBarProps {
+export interface SearchBarProps {
   onSearch: (searchTerm: string) => void;
   onReset: () => void;
 }

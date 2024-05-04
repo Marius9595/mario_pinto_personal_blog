@@ -17,7 +17,7 @@ export function Posts({posts}: {posts: Post[]}) {
       <section className={s.posts}>
 
         <section className={
-          posts ? s.posts__posts : s.posts__no_matches
+          posts ? s.posts__posts : s.posts__no_posts_text
         }
         >
           {posts ? posts.map((post: Post, index: number) => (
@@ -29,8 +29,8 @@ export function Posts({posts}: {posts: Post[]}) {
                   url={post.url ? post.url : post.url}
                   key={index}
               />
-          )) : <p className={s.posts__no_matches_text}>
-            No se encontraron coincidencias para la búsqueda
+          )) : <p className={s.posts__no_posts_text}>
+            No se encontraron posts
           </p>
 
           }

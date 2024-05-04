@@ -1,0 +1,37 @@
+---
+
+---
+<div class="logo_container">
+    <span class="logo_web"></span>
+</div>
+
+
+<style>
+
+    .logo_container{
+        display: none;
+    }
+
+    @media (min-width: 640px) {
+        .logo_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.1rem;
+
+            .logo_web {
+                display: inline-block;
+                width: 2.5em;
+                height: 2.5em;
+                --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5.59 3.41L7 4.82L3.82 8L7 11.18L5.59 12.6L1 8zm5.82 0L16 8l-4.59 4.6L10 11.18L13.18 8L10 4.82zM22 6v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-4h2v4h16V6h-2.97V4H20c1.11 0 2 .89 2 2'/%3E%3C/svg%3E");
+                background-color: var(--color-in-primary);
+                -webkit-mask-image: var(--svg);
+                mask-image: var(--svg);
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: 100% 100%;
+                mask-size: 100% 100%;
+            }
+        }
+    }
+</style>

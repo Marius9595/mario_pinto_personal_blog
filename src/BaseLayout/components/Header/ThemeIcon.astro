@@ -1,17 +1,28 @@
 ---
 ---
 <button id="themeToggle">
-    🌞
+    <p>🌞</p>
 </button>
 
 <style>
 
     #themeToggle {
-        width: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         aspect-ratio: 1;
         background: var(--color-bg);
-        box-shadow: 0 0 10px var(--color-secondary);
+        box-shadow: 0 0 10px var(--color-primary);
         border: none;
+        border-radius: 10%;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 15px var(--color-secondary);
+            transition: box-shadow 0.3s;
+        }
     }
 </style>
 

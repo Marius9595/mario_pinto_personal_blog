@@ -36,13 +36,15 @@ const meta: MetaSEO = {
     <SEO slot="head" meta={meta}/>
     <main class="content_post">
         <h1>{data.title}</h1>
-        <h3>{data.publicationDate}</h3>
+        <div class="content_posts__meta">
+            <p>Publicado: {data.publicationDate}</p>
+        </div>
         <hr/>
         <slot/>
     </main>
 
     <script is:inline>
-      let copyButtonLabel = "Copy Code";
+      let copyButtonLabel = "Copiar Código";
       let codeBlocks = Array.from(document.querySelectorAll("pre"));
 
       for (let codeBlock of codeBlocks) {
@@ -71,7 +73,7 @@ const meta: MetaSEO = {
         await navigator.clipboard.writeText(text);
 
         // visual feedback that task is completed
-        button.innerText = "Code Copied";
+        button.innerText = "Código Copiado";
 
         setTimeout(() => {
           button.innerText = copyButtonLabel;
@@ -83,10 +85,28 @@ const meta: MetaSEO = {
 
 <style>
     .content_post {
-        padding: 0 12rem;
+        margin: 2rem auto;
+
+        max-width: 55rem;
 
         h1 {
             text-align: center;
+        }
+
+        hr {
+            border: 0.1rem solid var(--color-primary);
+        }
+
+        .content_posts__meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+
+            p{
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
         }
 
 
@@ -102,14 +122,17 @@ const meta: MetaSEO = {
             position: absolute;
             top: 0;
             right: 0;
-            background-color: #3730a3;
+            background-color: var(--color-primary);
+            color: var(--color-in-primary);
             padding: 0.25rem 0.5rem;
             font-size: 0.75rem;
             line-height: 1rem;
         }
 
         .copy-code:hover {
-            background-color: #312e81;
+            box-shadow: 0 0 1rem 0 var(--color-secondary);
+            transition: box-shadow 0.3s;
+            cursor: pointer;
         }
 
     }

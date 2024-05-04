@@ -7,6 +7,12 @@ import Header from './components/Header/Header.astro';
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link
+              rel="alternate"
+              type="application/rss+xml"
+              title="Your Site's Title"
+              href={`${Astro.site}rss.xml`}
+      />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <slot name="head" />
@@ -17,6 +23,8 @@ import Header from './components/Header/Header.astro';
     <Footer />
     <script>
       import "./scripts/menu.js";
+      import { inject } from "@vercel/analytics";
+      inject()
     </script>
   </body>
 </html>

@@ -18,7 +18,7 @@ const posts = markdownPosts.map((post): Post => {
   }
 })
 
-const meta:MetaSEO = {
+const meta: MetaSEO = {
   title: 'Blog',
   description: 'Contenido sobre desarrollo de software, tecnología y otros temas de interés personal',
   image: {
@@ -31,7 +31,7 @@ const meta:MetaSEO = {
 ---
 
 <BaseLayout pageTitle="blog">
-    <SEO slot="head" meta={meta} />
+    <SEO slot="head" meta={meta}/>
     <main class="posts">
         <h1>Blog</h1>
         <PostsContainer posts={posts} client:load/>
@@ -45,10 +45,10 @@ const meta:MetaSEO = {
         gap: 1.5rem;
         justify-content: center;
         align-items: center;
+    }
 
-        h1 {
-            display: none;
-        }
+    h1 {
+        display: none
     }
 
     @media (min-width: 768px) {
@@ -56,12 +56,6 @@ const meta:MetaSEO = {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-
-            h1 {
-                display: block;
-                text-align: center;
-                margin: 0;
-            }
         }
     }
 </style>

@@ -1,8 +1,8 @@
 ---
-const { platform, username } = Astro.props;
+const { url } = Astro.props;
 ---
 
-<a class="socialIcon" href={`https://www.${platform}.com/${username}`}>
+<a class="socialIcon" href={url} target="_blank">
   <slot />
 </a>
 

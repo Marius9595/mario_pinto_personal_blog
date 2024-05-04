@@ -1,7 +1,7 @@
 ---
 //TODO (NO-URGENTE): Debe ser un React Component para testear el estado de la navegación
 
-let currentPath = Astro.request.url;
+import Logo from "./Logo.astro";
 
 const paths = [
   //{path: '/about/', name: 'About'}, //TODO (URGENTE): Agregar About Page
@@ -11,21 +11,12 @@ const paths = [
 
 <div class="nav-links">
 
-    <a href={"/"}
-       class={
-           paths.find(
-               (path) => currentPath.includes(path.path))
-               ? '' : 'isInPage'}
-    >
-        Home
-    </a>
+    <Logo/>
+    <a href={"/"}>Inicio</a>
 
   {
     paths.map((path) => {
-      const isInPage = (
-          currentPath.includes(path.path)
-      );
-      return <a href={path.path}  class={isInPage ? 'isInPage' : ''}>{path.name}</a>
+      return <a href={path.path} >{path.name}</a>
     })
   }
 </div>
@@ -65,18 +56,19 @@ const paths = [
         transition: text-decoration 0.3s;
     }
 
-    @media screen and (min-width: 636px) {
+    @media screen and (min-width: 640px) {
         .nav-links {
+            display: flex;
+            flex-direction: row;
             margin-left: 5em;
-            display: block;
             position: static;
             width: auto;
             background: none;
+            gap: 1em;
         }
 
         .nav-links a {
             display: inline-block;
-            padding: 15px 20px;
         }
     }
 </style>

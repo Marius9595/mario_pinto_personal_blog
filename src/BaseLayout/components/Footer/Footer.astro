@@ -3,7 +3,6 @@ import GithubIcon from '../Footer/GithubIcon.astro';
 import LinkedinIcon from '../Footer/LinkedinIcon.astro';
 import Social from '../Footer/Social.astro';
 import InstragramIcon from './InstragramIcon.astro';
-import MailIcon from './MailIcon.astro';
 import YoutubeIcon from './tube.astro';
 
 const currentYear = new Date().getFullYear();
@@ -14,19 +13,16 @@ const currentYear = new Date().getFullYear();
         <p>© {currentYear} Mario S. Pinto Miranda. Todos los derechos reservados.</p>
     </div>
     <div class="social_buttons">
-        <Social platform="twitter" username="astrodotbuild">
+        <Social url="https://www.linkedin.com/in/mariopintomiranda/">
             <LinkedinIcon/>
         </Social>
-        <Social platform="github" username="withastro">
+        <Social url="https://github.com/Marius9595">
             <GithubIcon/>
         </Social>
-        <Social platform="youtube" username="astrodotbuild">
-            <MailIcon/>
-        </Social>
-        <Social platform="youtube" username="astrodotbuild">
+        <Social url="https://www.youtube.com/@mariosebastianpintomiranda6184">
             <YoutubeIcon/>
         </Social>
-        <Social platform="youtube" username="astrodotbuild">
+        <Social url="https://www.instagram.com/mariospmdev/">
             <InstragramIcon/>
         </Social>
     </div>
@@ -45,6 +41,10 @@ const currentYear = new Date().getFullYear();
     .social_buttons {
         display: flex;
         gap: 1rem;
+    }
+
+    .footer_text {
+        color: var(--color-in-primary)
     }
 
     @media (min-width: 768px) {

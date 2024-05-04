@@ -38,15 +38,10 @@
     --border-radius: 0.25rem;
 
 
-    /* Transition */
+    /* SCREENS */
+    --max-mobile-width: 400px;
 
-
-    /* Animation */
-
-
-    /* Gradient */
-
-
-    /* Opacity */
+    /* TRANSITIONS */
+    --transition-time: 0.3s;
     
 }

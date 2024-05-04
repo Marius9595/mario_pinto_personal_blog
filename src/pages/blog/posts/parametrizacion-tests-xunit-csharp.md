@@ -4,7 +4,7 @@ layout: './_layout/MarkdownPostLayout.astro'
 title: Parametrización de tests con xUnit (C#)
 publicationDate: "2023-11-19"
 image: 
-  url: /public/posts-covers/parametrizacion-xunit-csharp.webp
+  url: /posts-covers/parametrizacion-xunit-csharp.webp
   alt: "Parametrización de tests con xUnit (C#)"
 author: "Mario S. Pinto Miranda"
 tags: ["xUnit", "Csharp", "Testing"]

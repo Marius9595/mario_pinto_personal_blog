@@ -6,7 +6,7 @@ publicationDate: "2023-06-26"
 author: "Mario S. Pinto Miranda"
 tags: ["Software", "Testing", "Dobles"]
 image: 
-  url: /public/posts-covers/mock-estrictos.webp
+  url: /posts-covers/mock-estrictos.webp
   alt: "Los Mocks escritos son una herramienta de diseño de software"
 description: ""
 

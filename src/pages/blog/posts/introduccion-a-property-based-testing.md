@@ -6,7 +6,7 @@ publicationDate: "2023-09-06"
 tags: ["Software", "Testing", "Properties"]
 author: "Mario S. Pinto Miranda"
 image: 
-  url: /public/posts-covers/introduccion-a-property-based-testing.jpeg
+  url: /posts-covers/introduccion-a-property-based-testing.jpeg
   alt: "Introducción a Property-based testing"
 description: ""
 

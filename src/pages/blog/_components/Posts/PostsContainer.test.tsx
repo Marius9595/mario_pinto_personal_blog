@@ -1,4 +1,4 @@
-import {describe, it, expect, beforeEach, afterEach} from "vitest";
+import {describe, it, expect} from "vitest";
 import {fireEvent, render, type RenderResult, waitFor} from "@testing-library/react";
 import {PostsContainer} from "./PostsContainer.tsx";
 import type {Post} from "../../types/Post.ts";

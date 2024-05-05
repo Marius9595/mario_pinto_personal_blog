@@ -1,6 +1,6 @@
 import {describe, expect, it, vi} from "vitest";
 import ThemeIcon from "./ThemeIcon.tsx";
-import {fireEvent, render, type RenderResult, waitFor} from "@testing-library/react";
+import {fireEvent, render, type RenderResult} from "@testing-library/react";
 
 describe('<ThemeIcon/>', () => {
   const themeRepositoryMock: Storage = {

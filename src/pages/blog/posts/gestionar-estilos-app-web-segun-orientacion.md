@@ -17,11 +17,11 @@ vimos que puede que sea más fácil el consumo de la app si los usuarios simplem
 una dirección web leyendo un QR tras analizar la retroalimentación de la aplicación móvil de varios usuarios.
 Esto se debe a cierta desconfianza hoy en día y la molestia de descargar e instalar una aplicación móvil.
 Tenía mucho sentido la versión móvil al ser una aplicación sin necesidad de acceso a recursos en internet.
-Pero, la realidad es que una versión SPA funcionaria similar pues con una carga el usuario tendría todos los
+Pero, la realidad es que una versión SPA funcionaría similar, pues con una carga el usuario tendría todos los
 recursos. 
 
 Ahora bien, si ves la app móvil, está desarrollada exclusivamente sobre un layout horizontal, uno vertical
-no tenía sentido si se quiere una "migración" rápida (calcar diseño pues se hizo con React Native).
+no tenía sentido si se quiere una "migración" rápida (calcar diseño que se hizo con React Native).
 Esto no sabía como gestionarlo, pero después de una primera iteración con un script de JavaScript me pregunté
 si había alguna forma más sencilla de hacerlo. Y me encontré con que sí, que CSS tiene una propiedad que permite
 gestionar este tipo de situaciones. ¡Veámoslo!

@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "SODA Checks development with Test-Driven-Development"
-pubDate: "06/07/2023"
+pubDate: "2023-07-06"
 image: 
   url: "/posts-covers/soda-checks.jpeg"
   alt: "SODA Checks development with Test-Driven-Development"

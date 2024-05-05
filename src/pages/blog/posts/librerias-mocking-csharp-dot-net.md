@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Librerías de mocking para C# .NET"
-pubDate: "16/11/2023"
+pubDate: "2023-11-16"
 author: "Mario S. Pinto Miranda"
 image: 
   url: "/posts-covers/librerias-mocks-csharp.webp"
@@ -9,6 +9,7 @@ image:
 tags: ["Mocking", "Csharp", "Testing"]
 description: "Una guía rápida sobre las librerías para mocking más populares para C# .NET. para que puedas elegir la que mejor se adapte a tus necesidades."
 ---
+
 
 La importancia de aprender a usar mocks durante el desarrollo de software radica
 esencialmente en dos direcciones: velocidad del feedback y validar las

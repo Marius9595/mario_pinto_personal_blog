@@ -27,7 +27,7 @@ describe('<ThemeIcon/>', () => {
 
     fireEvent.click(themeICon.getByText('🌞'))
 
-    assertHasChangedToLightThemeAfterClickOn(themeICon)
+    assertHasChangedToDarkThemeAfterClickOn(themeICon)
   })
 
   it('should change dark to light when it is clicked', () => {
@@ -36,7 +36,7 @@ describe('<ThemeIcon/>', () => {
 
     fireEvent.click(themeICon.getByText('🌜'))
 
-    assertHasChangedToDarkThemeAfterClickOn(themeICon)
+    assertHasChangedToLightThemeAfterClickOn(themeICon)
   })
 
   function assertHasChangedToLightThemeAfterClickOn(themeICon: RenderResult) {

@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Los Mocks escritos son una herramienta de diseño de software"
-pubDate: "26/06/2023"
+pubDate: "2023-06-26"
 author: "Mario S. Pinto Miranda"
 tags: ["Software", "Testing", "Dobles"]
 image: 

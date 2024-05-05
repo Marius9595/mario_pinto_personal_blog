@@ -10,6 +10,7 @@ Funcionalidades del blog (MVP):
 - Página de blog con una lista de posts y un buscador.
 - Página de post individual con contenido en formato Markdown.
 - Cambio de tema de luz a oscuro.
+- Feed RSS para los posts del blog.
 
 Funcionalidades futuras (Roadmap):
 - [ ] Separar contenido como strings separados para facilitar la internacionalización y personalización.

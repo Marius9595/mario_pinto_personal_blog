@@ -1,7 +1,7 @@
 ---
 layout: './_layout/MarkdownPostLayout.astro'
 title: "Parametrización de tests con xUnit (C#)"
-pubDate: "19/11/2023"
+pubDate: "2023-11-19"
 image: 
   url: "/posts-covers/parametrizacion-xunit-csharp.webp"
   alt: "Parametrización de tests con xUnit (C#)"

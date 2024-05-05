@@ -1,47 +1,108 @@
-# Astro Starter Kit: Minimal
+# Personal Blog
 
-```sh
-npm create astro@latest -- --template minimal
+## Descripción General
+
+Este proyecto es un blog personal construido con Astro, un moderno generador de sitios estáticos,
+y utiliza React para componentes interactivos.
+
+Funcionalidades del blog (MVP):
+- Página de inicio con información personal y enlaces a redes sociales.
+- Página de blog con una lista de posts y un buscador.
+- Página de post individual con contenido en formato Markdown.
+- Cambio de tema de luz a oscuro.
+
+Funcionalidades futuras (Roadmap):
+- [ ] Separar contenido como strings separados para facilitar la internacionalización y personalización.
+- [ ] Página de proyectos personales.
+- [ ] Página de contacto.
+- [ ] Página de curriculum vitae.
+- [ ] Página de servicios.
+- [ ] Página de portafolio.
+- [ ] Filtro por Etiquetas en la página de blog.
+- [ ] Comentarios en los posts.
+- [ ] Página de error 404.
+- [ ] Página de política de privacidad.
+- [ ] Página de términos y condiciones.
+- [ ] Añadir Soporte para i18n u otra forma de gestionar varios idiomas.
+- [ ] Añadir pagina de cursos y formación.
+- [ ] Añadir página de libros recomendados.
+- [ ] Integrar Notion para gestionar los posts del blog.
+- [ ] Integrar Obsidian para segundo cerebro y notas.
+
+
+## Requisitos
+
+Para ejecutar este proyecto, necesitarás tener instalado Node.js 
+y npm en tu sistema. Puedes descargar Node.js desde su
+[sitio web oficial](https://nodejs.org/) y npm se instala automáticamente
+con Node.js.
+
+Actualmente, está listo para ser desplegado en Vercel, pero puedes desplegarlo
+en cualquier otro proveedor de alojamiento web que soporte sitios estáticos.
+
+## Instalación
+
+Para instalar las dependencias del proyecto, navega hasta el directorio
+del proyecto en tu terminal y ejecuta el siguiente comando:
+
+```bash
+npm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Ejecución
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Para ejecutar el proyecto en modo de desarrollo, utiliza el siguiente comando:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Para construir el proyecto para producción, utiliza el siguiente comando:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm run build
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Pruebas
 
-## 🧞 Commands
+Para ejecutar las pruebas del proyecto, utiliza el siguiente comando:
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run test
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Estructura del Proyecto
 
-## 👀 Want to learn more?
+El proyecto sigue una estructura de directorios estándar para un proyecto Astro. Aquí hay una descripción de los directorios más importantes:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `src/`: Este directorio contiene todo el código fuente del proyecto. Aquí es donde encontrarás todos los componentes de React y las páginas de Astro.
+- `src/pages/`: Este directorio contiene todas las páginas de la aplicación. Cada archivo `.astro` en este directorio se convierte en una ruta en la aplicación.
+- `src/BaseLayout/`: Este directorio contiene el diseño base que se utiliza en todas las páginas.
+- `src/BaseLayout/styles/`: Este directorio contiene los estilos globales del proyecto.
+  - `src/BaseLayout/styles/global.css`: Este archivo contiene los estilos globales del proyecto.
+  - `src/BaseLayout/styles/colors.css`: Este archivo contiene las variables de colores del proyecto y de themes, aquí el valor --hue es el eje central.
+- `src/pages/*/_components/`: Este directorio contiene los componentes relacionados y específicos de una Página.
+- `src/pages/blog/posts/`: Este directorio contiene los posts del blog en formato Markdown.
+
+## Contribución
+
+Este repositorio es él que uso para mi blog personal, pero siéntete libre de
+utilizarlo para tu propio blog personal o para cualquier otro propósito. 
+
+Si deseas contribuir, primero agradezco tu interés en hacerlo y ayudar a mejorarlo,
+pues puede ser de utilidad para otras personas que quieran clonarlo y personalizarlo para su propio blog.
+Y segundo por favor, asegúrate de seguir las mejores prácticas de desarrollo y de realizar pruebas
+en tus cambios antes de enviar un pull request dando
+una descripción de la motivación, estrategia y referencias para evaluarla.
+
+Es importante mantener la estrategia de testing en los componentes interactivos:
+- Pruebas Unitarias a los componentes representacionales inyectando por props los accionadores.
+- Pruebas de Integración sobre los contenedores que conectan los componentes con el estado global.
+- Pruebas de Aceptación sobre los componentes interactivos que interactúan con el usuario (de momento no hay, pero será con
+Playwright seguramente).
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la licencia MIT.
+
+Siente libre de utilizar este proyecto para tu propio blog personal o para cualquier otro propósito.

@@ -1,10 +1,11 @@
 import {describe, it, expect} from "vitest";
 import {Post} from "./Post.tsx";
 import {render} from "@testing-library/react";
+import type {PostMeta} from "../../_types/PostMeta.ts";
 
 describe("<Post/>", () => {
 
-  const post = {
+  const post: PostMeta = {
     title: "Post 1",
     tags: ["tag1", "tag2"],
     image: {
@@ -16,7 +17,7 @@ describe("<Post/>", () => {
   }
 
   it("should render post", () => {
-    const result = render(Post(post));
+    const result = render(<Post post={post}/>);
 
     result.getByAltText("alt");
     result.getByText("Post 1");
@@ -24,19 +25,19 @@ describe("<Post/>", () => {
     result.getByText("tag2");
   })
 
-  it('should put target="_blank" when link to post is external to web"', () => {
+  it('should open a new tab when post is external to web"', () => {
     const postWithExternalURL = {
       ...post,
       url: "http://url"
     };
 
-    const result = render(Post(postWithExternalURL));
+    const result = render(<Post post={postWithExternalURL}/>);
 
     expect(result.getByText("Post 1").closest('a')).toHaveAttribute('target', '_blank');
   })
 
-  it('should not put target="_blank" when link to post is in the web', () => {
-    const result = render(Post(post));
+  it('should not not open in the same page when post is in the web', () => {
+    const result = render(<Post post={post}/>);
 
     expect(result.getByText("Post 1").closest('a')).not.toHaveAttribute('target', '_blank');
   })

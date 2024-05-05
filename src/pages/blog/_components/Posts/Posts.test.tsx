@@ -7,7 +7,7 @@ import Posts from "./Posts.tsx";
 
 describe("<Posts/>", () => {
   it("should not render posts when post are not passed", () => {
-    const result = render(Posts({posts: []}));
+    const result = render(<Posts posts={[]} /> );
 
     result.getByText("No se encontraron posts");
   });
@@ -26,7 +26,7 @@ describe("<Posts/>", () => {
       }
     ];
 
-    const result = render(Posts({posts}));
+    const result = render(<Posts posts={posts}/>);
 
     result.getByAltText("alt");
     result.getByText("Post 1");

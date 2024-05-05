@@ -5,7 +5,7 @@ import type {MetaSEO} from "../../../_shared/types/MetaSEO";
 
 type postFrontMatter = {
   title: string
-  publicationDate: string
+  pubDate: string
   tags: Array<string>
   author: string
   image: {
@@ -37,7 +37,7 @@ const meta:MetaSEO = {
     <main class="content_post">
         <h1>{data.title}</h1>
         <div class="content_posts__meta">
-            <p>Publicado: {data.publicationDate}</p>
+            <p>Publicado: {data.pubDate}</p>
         </div>
         <hr/>
         <slot/>
@@ -109,10 +109,6 @@ const meta:MetaSEO = {
             }
         }
 
-
-        p, li {
-            text-align: justify;
-        }
 
         pre {
             padding: 1rem;

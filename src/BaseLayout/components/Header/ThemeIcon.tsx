@@ -4,7 +4,7 @@ import s from "./ThemeIcon.module.css";
 
 type Theme = "light" | "dark";
 export default function ThemeIcon(
-    {themeRepository = localStorage}: {themeRepository:Storage}
+    {themeRepository = localStorage}: {themeRepository?:Storage}
 ) {
 
   const [theme, setTheme] = useState(themeRepository.getItem('theme') as Theme || 'light');

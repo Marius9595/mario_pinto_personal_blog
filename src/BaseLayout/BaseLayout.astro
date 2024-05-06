@@ -15,6 +15,7 @@ import Header from './components/Header/Header.astro';
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content={Astro.generator}/>
+    <script src="https://cdn.jsdelivr.net/npm/bowser@2.11.0/bowser.min.js"></script>
     <slot name="head"/>
 </head>
 <body>
@@ -28,11 +29,15 @@ import Header from './components/Header/Header.astro';
   inject()
 
 </script>
-<script is:inline>
+<script is:inline >
   let theme = localStorage.getItem('theme') ?? "light";
   document.documentElement.classList.add(theme);
   let isDark = theme === "dark";
   document.getElementById("themeToggle").textContent = isDark ? "🌜" : "🌞";
+</script>
+
+<script>
+    import './scripts/versionBrowserDetectionForThemesManagement.js'
 </script>
 </body>
 </html>

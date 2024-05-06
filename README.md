@@ -13,6 +13,7 @@ Funcionalidades del blog (MVP):
 - Feed RSS para los posts del blog.
 
 Funcionalidades futuras (Roadmap):
+- [ ] Testing e2e con Playwright.
 - [ ] Separar contenido como strings separados para facilitar la internacionalización y personalización.
 - [ ] Página de proyectos personales.
 - [ ] Página de contacto.

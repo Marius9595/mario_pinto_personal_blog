@@ -11,6 +11,8 @@ Funcionalidades del blog (MVP):
 - Página de post individual con contenido en formato Markdown.
 - Cambio de tema de luz a oscuro.
 - Feed RSS para los posts del blog.
+- Analytics Vercel.
+- SpeedInsights Vercel
 
 Funcionalidades futuras (Roadmap):
 - [ ] Testing e2e con Playwright.

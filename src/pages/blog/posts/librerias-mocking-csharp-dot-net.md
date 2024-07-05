@@ -6,7 +6,7 @@ author: "Mario S. Pinto Miranda"
 image:
   url: "/posts-covers/librerias-mocks-csharp.webp"
   alt: "Librerías de mocking para C# .NET"
-tags: [ "Mocking", "Csharp", "Testing" ]
+tags: [ "Mocking", ".NET", "Testing" ]
 description: "Una guía rápida sobre las librerías para mocking más populares para C# .NET. para que puedas elegir la que mejor se adapte a tus necesidades."
 ---
 

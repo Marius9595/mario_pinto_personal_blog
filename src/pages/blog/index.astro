@@ -8,25 +8,29 @@ import type {MetaSEO} from "../_shared/types/MetaSEO";
 
 const markdownPosts = await Astro.glob('../../pages/blog/posts/*.md');
 
-const posts: Post[] = markdownPosts.map((post): Post => {
-  return {
-    title: post.frontmatter.title as string,
-    tags: post.frontmatter.tags as string[],
-    image: post.frontmatter.image as Image,
-    publicationDate: post.frontmatter.pubDate as string,
-    url: post.frontmatter.url ? post.frontmatter.url : post.url as string
-  }
-})
+const posts: Post[] = markdownPosts
+    .map((post): Post => {
+        return {
+            title: post.frontmatter.title as string,
+            tags: post.frontmatter.tags as string[],
+            image: post.frontmatter.image as Image,
+            publicationDate: post.frontmatter.pubDate as string,
+            url: post.frontmatter.url ? post.frontmatter.url : post.url as string
+        }
+    })
+    .sort((a, b) => {
+        return new Date(b.publicationDate).getTime() - new Date(a.publicationDate).getTime();
+    })
 
 const meta: MetaSEO = {
-  title: 'Blog',
-  description: 'Contenido sobre desarrollo de software, tecnología y otros temas de interés personal',
-  image: {
-    url: 'author.png',
-    alt: 'Mario S. Pinto Miranda'
-  },
-  keywords: ['blog', 'desarrollo de software', 'tecnología', 'programación'],
-  url: '/blog',
+    title: 'Blog',
+    description: 'Contenido sobre desarrollo de software, tecnología y otros temas de interés personal',
+    image: {
+        url: 'author.png',
+        alt: 'Mario S. Pinto Miranda'
+    },
+    keywords: ['blog', 'desarrollo de software', 'tecnología', 'programación'],
+    url: '/blog',
 }
 ---
 

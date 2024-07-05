@@ -6,7 +6,7 @@ image:
   url: "/posts-covers/parametrizacion-xunit-csharp.webp"
   alt: "Parametrización de tests con xUnit (C#)"
 author: "Mario S. Pinto Miranda"
-tags: ["xUnit", "Csharp", "Testing"]
+tags: ["xUnit", ".NET", "Testing"]
 description: "En este artículo se introduce a la parametrización de tests y cómo realizarlo con xUnit en C#."
 ---
 

@@ -5,6 +5,7 @@ import type {Post} from "../../types/Post.ts";
 
 describe('<PostsContainer/>', () => {
   const post1: Post =     {
+    author: "author",
     title: "Post 1",
     tags: ["tag1", "tag2"],
     image: {
@@ -15,6 +16,7 @@ describe('<PostsContainer/>', () => {
     url: "url"
   }
   const post2: Post = {
+    author: "author",
     title: "Post 2",
     tags: ["tag3", "tag4"],
     image: {

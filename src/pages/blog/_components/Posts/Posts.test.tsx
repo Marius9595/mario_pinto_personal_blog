@@ -15,6 +15,7 @@ describe("<Posts/>", () => {
   it("should render posts when posts are passed", () => {
     const posts = [
       {
+        author: "author",
         title: "Post 1",
         tags: ["tag1", "tag2"],
         image: {

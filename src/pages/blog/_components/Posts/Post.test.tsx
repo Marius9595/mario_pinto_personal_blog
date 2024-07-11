@@ -6,6 +6,7 @@ import type {PostMeta} from "../../_types/PostMeta.ts";
 describe("<Post/>", () => {
 
   const post: PostMeta = {
+    author: "author",
     title: "Post 1",
     tags: ["tag1", "tag2"],
     image: {

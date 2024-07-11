@@ -36,6 +36,7 @@ const meta:MetaSEO = {
     <SEO slot="head" meta={meta}/>
     <main class="content_post">
         <h1>{data.title}</h1>
+        <h3>{data.author}</h3>
         <div class="content_posts__meta">
             <p>Publicado: {data.pubDate}</p>
         </div>
@@ -89,7 +90,7 @@ const meta:MetaSEO = {
 
         max-width: 55rem;
 
-        h1 {
+        h1, h3 {
             text-align: center;
         }
 

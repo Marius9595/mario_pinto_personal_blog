@@ -12,6 +12,7 @@ const posts: Post[] = markdownPosts
     .map((post): Post => {
         return {
             title: post.frontmatter.title as string,
+            author: post.frontmatter.author as string,
             tags: post.frontmatter.tags as string[],
             image: post.frontmatter.image as Image,
             publicationDate: post.frontmatter.pubDate as string,

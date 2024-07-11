@@ -2,6 +2,7 @@
 layout: './_layout/MarkdownPostLayout.astro'
 title: "SODA Checks development with Test-Driven-Development"
 pubDate: "2023-07-06"
+author: "Mario S. Pinto Miranda"
 image: 
   url: "/posts-covers/soda-checks.jpeg"
   alt: "SODA Checks development with Test-Driven-Development"
